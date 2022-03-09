@@ -4,6 +4,9 @@ using NekosBestApi.Models.Images;
 
 namespace NekosBestApi.Endpoints 
 {
+    /// <summary>
+    /// Return a random Neko or Kitsune!
+    /// </summary>
     public interface ICategoryApi
     {
         /// <summary>

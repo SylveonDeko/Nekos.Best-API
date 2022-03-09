@@ -1,23 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.0.6</Version>
+    <Version>1.0.0</Version>
     <Authors>Sylveon</Authors>
-    <Description>C# wrapper for the Martine API</Description>
+    <Description>C# wrapper for the Nekos.Best API</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.6</AssemblyVersion>
-    <FileVersion>1.0.6</FileVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>martinebot.com</PackageProjectUrl>
+    <PackageProjectUrl>docs.nekos.best</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Sylveon76/MartineApi.Net</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>1.0.6</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <TargetFrameworks>net5.0;</TargetFrameworks>
     <PackageId>NekosBestApi</PackageId>
+    <PackageIconUrl>src="https://cdn.discordapp.com/icons/850825316766842881/070d7465948cdcf9004630fa8629627b.webp"</PackageIconUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DocumentationFile>bin\Release\MartineApiNet.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\NekosBestApi.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Refit" Version="6.3.2" />
