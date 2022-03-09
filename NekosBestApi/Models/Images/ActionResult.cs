@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace NekosBestApi.Models.Images 
 {
-    public class Result
+    public class ActionResults
     {
         [JsonPropertyName("anime_name")]
         public string AnimeName { get; set; }
@@ -15,6 +15,6 @@ namespace NekosBestApi.Models.Images
     public class ActionResult
     {
         [JsonPropertyName("results")]
-        public List<Result> Results { get; set; }
+        public List<ActionResults> Results { get; set; }
     }
 }
