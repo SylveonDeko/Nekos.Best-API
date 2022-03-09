@@ -10,7 +10,7 @@
     <FileVersion>1.0.0</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>docs.nekos.best</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Sylveon76/MartineApi.Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Sylveon76/Nekos.Best-API</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageVersion>1.0.0</PackageVersion>
     <TargetFrameworks>net5.0;</TargetFrameworks>

@@ -11,7 +11,7 @@
 
 We focus on giving the best experience for our users and their projects, for free.
 
-### If you find any errors/issues or want any features added, [create an issue](https://github.com/Sylveon76/NekosBestApi.Net/issues/new/)
+### If you find any errors/issues or want any features added, [create an issue](https://github.com/Sylveon76/Nekos.Best-API/issues/new/)
 
 ## Getting started
 
