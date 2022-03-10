@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using Refit;
-using NekosBestApi.Models.Images;
+using NekosBestApiNet.Models.Images;
 
-namespace NekosBestApi.Endpoints 
+namespace NekosBestApiNet.Endpoints 
 {
     /// <summary>
     /// Actions like poke, hug, or cuddle, even (LEWD!) kiss!

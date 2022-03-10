@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Http;
-using NekosBestApi.Endpoints;
+using NekosBestApiNet.Endpoints;
 using Refit;
 
-namespace NekosBestApi 
+namespace NekosBestApiNet
 {
   public class NekosBestApi 
   {

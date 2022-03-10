@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace NekosBestApi.Models.Images 
+namespace NekosBestApiNet.Models.Images 
 {
     public class ActionResults
     {
