@@ -127,7 +127,7 @@ public class ExampleClass
   public ExampleClass(NekosBestApi nekosBestApi) 
     => _nekosBestApi = nekosBestApi;
 
-  public async Task<ActionResult> GetRandomMeme()
+  public async Task<ActionResult> Hug()
     => await _nekosBestApi.Hug();
 }
 ```
