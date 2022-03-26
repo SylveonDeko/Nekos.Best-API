@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Sylveon</Authors>
     <Description>C# wrapper for the Nekos.Best API</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>docs.nekos.best</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Sylveon76/Nekos.Best-API</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <TargetFrameworks>net5.0;</TargetFrameworks>
     <PackageId>NekosBestApiNet</PackageId>
     <PackageIconUrl>src="https://cdn.discordapp.com/icons/850825316766842881/070d7465948cdcf9004630fa8629627b.webp"</PackageIconUrl>
