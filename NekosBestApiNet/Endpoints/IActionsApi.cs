@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Refit;
 using NekosBestApiNet.Models.Images;
@@ -36,6 +37,34 @@ namespace NekosBestApiNet.Endpoints
         /// </summary>
         [Get("/bored")]
         Task<ActionResult> Bored(int results = 1);
+        
+        /// <summary>
+        /// Returns a kick gif. (Good luck moderation bots, lol)
+        /// <param name="results">Returns the number of results you want. Defaults to 1.</param>
+        /// </summary>
+        [Get("/kick")]
+        Task<ActionResult> Kick(int results = 1);
+        
+        /// <summary>
+        /// Returns a shoot gif. You won't shoot a kawaii dev like me, right? right?
+        /// <param name="results">Returns the number of results you want. Defaults to 1.</param>
+        /// </summary>
+        [Get("/shoot")]
+        Task<ActionResult> Shoot(int results = 1);
+        
+        /// <summary>
+        /// Returns a handhold gif (Lewd Monster!).
+        /// <param name="results">Returns the number of results you want. Defaults to 1.</param>
+        /// </summary>
+        [Get("/handhold")]
+        Task<ActionResult> Handhold(int results = 1);
+
+        /// <summary>
+        /// Returns a punch gif. Do an Mike Tyson on em.
+        /// <param name="results">Returns the number of results you want. Defaults to 1.</param>
+        /// </summary>
+        [Get("/punch")]
+        Task<ActionResult> Punch(int results = 1);
         
         /// <summary>
         /// They didn't have any pocky at the store *sob*
