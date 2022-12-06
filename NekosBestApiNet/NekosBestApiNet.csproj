@@ -13,9 +13,10 @@
     <RepositoryUrl>https://github.com/Sylveon76/Nekos.Best-API</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageVersion>1.0.4</PackageVersion>
-    <TargetFrameworks>net5.0;</TargetFrameworks>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <PackageId>NekosBestApiNet</PackageId>
     <PackageIconUrl>src="https://cdn.discordapp.com/icons/850825316766842881/070d7465948cdcf9004630fa8629627b.webp"</PackageIconUrl>
+    <LangVersion>latestmajor</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DocumentationFile>bin\Release\NekosBestApi.xml</DocumentationFile>

@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using Refit;
+using System.Threading.Tasks;
 using NekosBestApiNet.Models.Images;
+using Refit;
 
-namespace NekosBestApiNet.Endpoints 
+namespace NekosBestApiNet.Endpoints
 {
     /// <summary>
     /// Return a random Neko or Kitsune!
@@ -15,15 +15,15 @@ namespace NekosBestApiNet.Endpoints
         /// </summary>
         [Get("/kitsune")]
         Task<CategoryResult> Kitsune(int results = 1);
-        
+
         /// <summary>
         /// Nyaa~ Returns a random Neko.
         /// <param name="results">Number of results to return.</param>
         /// </summary>
         [Get("/neko")]
         Task<CategoryResult> Neko(int results = 1);
-        
-        
+
+
         /// <summary>
         /// Ara Ara~ Returns a random waifu
         /// </summary>
