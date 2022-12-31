@@ -261,4 +261,12 @@ public interface IActionsApi
     /// </summary>
     [Get("/wink")]
     Task<ActionResult> Wink(int results = 1);
+
+    /// <summary>
+    ///     This bitch empty, YEEET!, Returns a random yeet image.
+    /// </summary>
+    /// <param name="results"></param>
+    /// <returns></returns>
+    [Get("/yeet")]
+    Task<ActionResult> Yeet(int results = 1);
 }

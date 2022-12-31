@@ -34,4 +34,12 @@ public interface ICategoryApi
     /// <param name="results">Number of results to return</param>
     [Get("/waifu")]
     Task<CategoryResult> Waifu(int results = 1);
+
+    /// <summary>
+    ///     Returns a random husbando
+    /// </summary>
+    /// <param name="results"></param>
+    /// <returns>Number of results to return.</returns>
+    [Get("/husbando")]
+    Task<CategoryResult> Husbando(int results = 1);
 }

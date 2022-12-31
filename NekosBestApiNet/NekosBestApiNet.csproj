@@ -12,7 +12,7 @@
     <PackageProjectUrl>docs.nekos.best</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SylveonDeko/Nekos.Best-API</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>1.0.5</PackageVersion>
+    <PackageVersion>1.0.6</PackageVersion>
     <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <PackageId>NekosBestApiNet</PackageId>
     <PackageIconUrl>src="https://cdn.discordapp.com/icons/850825316766842881/070d7465948cdcf9004630fa8629627b.webp"</PackageIconUrl>
