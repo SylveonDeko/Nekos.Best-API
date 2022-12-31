@@ -140,6 +140,31 @@ public interface IActionsApi
     Task<ActionResult> Laugh(int results = 1);
 
     /// <summary>
+    ///     *nods* Returns a random nod image!
+    /// </summary>
+    /// <param name="results"></param>
+    /// <returns>Returns the number of results you want. Defaults to 1.</returns>
+    [Get("/nod")]
+    Task<ActionResult> Nod(int results = 1);
+
+    /// <summary>
+    ///     *nom* Returns a random nom image.
+    /// </summary>
+    /// <param name="results"></param>
+    /// <returns>Returns the number of results you want. Defaults to 1.</returns>
+    [Get("/nom")]
+    Task<ActionResult> Nom(int results = 1);
+
+    /// <summary>
+    ///     NOPE im outta here, returns a random nope image
+    /// </summary>
+    /// <param name="results"></param>
+    /// <returns>Returns the number of results you want. Defaults to 1.</returns>
+    [Get("/nope")]
+    Task<ActionResult> Nope(int results = 1);
+
+
+    /// <summary>
     ///     *gives pattus* Returns a random pat image!
     ///     <param name="results">Returns the number of results you want. Defaults to 1.</param>
     /// </summary>
