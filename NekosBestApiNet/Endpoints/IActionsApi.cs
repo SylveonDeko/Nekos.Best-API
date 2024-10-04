@@ -63,6 +63,34 @@ public interface IActionsApi
     Task<ActionResult> Handhold(int results = 1);
 
     /// <summary>
+    ///     Returns a handshake gif.
+    ///     <param name="results">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/handshake")]
+    Task<ActionResult> Handshake(int results = 1);
+
+    /// <summary>
+    ///     ~sneak~
+    ///     <param name="results">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/lurk")]
+    Task<ActionResult> Lurk(int results = 1);
+
+    /// <summary>
+    ///     Peck.
+    ///     <param name="results">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/peck")]
+    Task<ActionResult> Peck(int results = 1);
+
+    /// <summary>
+    ///     ~yawn~ im doing this in the sleepy morning.
+    ///     <param name="results">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/yawn")]
+    Task<ActionResult> Yawn(int results = 1);
+
+    /// <summary>
     ///     Returns a punch gif. Do an Mike Tyson on em.
     ///     <param name="results">Returns the number of results you want. Defaults to 1.</param>
     /// </summary>

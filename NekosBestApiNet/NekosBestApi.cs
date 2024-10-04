@@ -2,6 +2,7 @@
 
 using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using NekosBestApiNet.Endpoints;
 using Refit;
 
@@ -16,12 +17,16 @@ public class NekosBestApi
     /// <summary>
     ///     Constructor with token only
     /// </summary>
-    public NekosBestApi()
+    public NekosBestApi(string clientName)
     {
+        var productValue = new ProductInfoHeaderValue(clientName, "1.0.7");
+        var commentValue = new ProductInfoHeaderValue("(+https://github.com/SylveonDeko/Nekos.Best-API)");
         var httpClient = new HttpClient
         {
             BaseAddress = new Uri(BaseUrl)
         };
+        httpClient.DefaultRequestHeaders.UserAgent.Add(productValue);
+        httpClient.DefaultRequestHeaders.UserAgent.Add(commentValue);
         Initialize(httpClient);
     }
 
