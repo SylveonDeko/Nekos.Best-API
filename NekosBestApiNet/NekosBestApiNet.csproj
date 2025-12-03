@@ -1,28 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <Authors>SylveonDeko</Authors>
     <Description>C# wrapper for the Nekos.Best API</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.7</AssemblyVersion>
-    <FileVersion>1.0.7</FileVersion>
+    <AssemblyVersion>1.0.8</AssemblyVersion>
+    <FileVersion>1.0.8</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>docs.nekos.best</PackageProjectUrl>
+    <PackageProjectUrl>https://docs.nekos.best</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SylveonDeko/Nekos.Best-API</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>1.0.7</PackageVersion>
-    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <PackageVersion>1.0.8</PackageVersion>
+    <TargetFrameworks>netstandard2.0;net8.0;net9.0</TargetFrameworks>
     <PackageId>NekosBestApiNet</PackageId>
-    <PackageIconUrl>src="https://cdn.discordapp.com/icons/850825316766842881/070d7465948cdcf9004630fa8629627b.webp"</PackageIconUrl>
-    <LangVersion>latestmajor</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DocumentationFile>bin\Release\NekosBestApi.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Refit" Version="6.3.2"/>
+    <PackageReference Include="Refit" Version="9.0.2"/>
   </ItemGroup>
 
 </Project>
