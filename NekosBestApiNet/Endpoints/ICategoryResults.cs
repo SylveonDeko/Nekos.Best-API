@@ -18,14 +18,14 @@ public interface ICategoryApi
     ///     <param name="results">Number of results to return.</param>
     /// </summary>
     [Get("/kitsune")]
-    Task<CategoryResult> Kitsune(int results = 1);
+    public Task<CategoryResult> Kitsune(int results = 1);
 
     /// <summary>
     ///     Nyaa~ Returns a random Neko.
     ///     <param name="results">Number of results to return.</param>
     /// </summary>
     [Get("/neko")]
-    Task<CategoryResult> Neko(int results = 1);
+    public Task<CategoryResult> Neko(int results = 1);
 
 
     /// <summary>
@@ -33,7 +33,7 @@ public interface ICategoryApi
     /// </summary>
     /// <param name="results">Number of results to return</param>
     [Get("/waifu")]
-    Task<CategoryResult> Waifu(int results = 1);
+    public Task<CategoryResult> Waifu(int results = 1);
 
     /// <summary>
     ///     Returns a random husbando
@@ -41,5 +41,5 @@ public interface ICategoryApi
     /// <param name="results"></param>
     /// <returns>Number of results to return.</returns>
     [Get("/husbando")]
-    Task<CategoryResult> Husbando(int results = 1);
+    public Task<CategoryResult> Husbando(int results = 1);
 }
