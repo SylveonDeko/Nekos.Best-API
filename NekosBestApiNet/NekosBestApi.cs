@@ -10,6 +10,9 @@ using Refit;
 
 namespace NekosBestApiNet;
 
+/// <summary>
+///     Main client for interacting with the Nekos.Best API.
+/// </summary>
 public class NekosBestApi
 {
     private const string BaseUrl = "https://nekos.best/api/v2";
@@ -39,8 +42,14 @@ public class NekosBestApi
         Initialize(httpClient);
     }
 
+    /// <summary>
+    ///     Gets the Actions API endpoint for action-based GIF requests.
+    /// </summary>
     public IActionsApi ActionsApi { get; private set; }
 
+    /// <summary>
+    ///     Gets the Category API endpoint for image category requests.
+    /// </summary>
     public ICategoryApi CategoryApi { get; private set; }
 
     private void Initialize(HttpClient httpClient)
