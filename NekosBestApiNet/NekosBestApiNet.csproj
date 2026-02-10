@@ -6,8 +6,8 @@
     <Description>C# wrapper for the Nekos.Best API</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.9</AssemblyVersion>
-    <FileVersion>1.0.9</FileVersion>
+    <AssemblyVersion>1.0.10</AssemblyVersion>
+    <FileVersion>1.0.10</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://docs.nekos.best</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SylveonDeko/Nekos.Best-API</RepositoryUrl>
