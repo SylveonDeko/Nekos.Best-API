@@ -12,7 +12,7 @@
     <PackageProjectUrl>https://docs.nekos.best</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SylveonDeko/Nekos.Best-API</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageVersion>1.0.9</PackageVersion>
+    <PackageVersion>1.0.10</PackageVersion>
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     <PackageId>NekosBestApiNet</PackageId>
     <LangVersion>latest</LangVersion>
