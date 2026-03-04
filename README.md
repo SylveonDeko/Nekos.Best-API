@@ -7,130 +7,142 @@
 
 ## Overview
 
-[Nekos.Best API](https://docs.nekos.best/index.html) is a RESTful API serving fully SFW and high quality anime images and GIFs.
+A C# wrapper for the [Nekos.Best API](https://docs.nekos.best/index.html), which serves fully SFW, high quality anime images and GIFs. All endpoints are available through two APIs: `ActionsApi` for action-based GIFs and `CategoryApi` for image categories.
 
-We focus on giving the best experience for our users and their projects, for free.
+If you find any bugs or want a feature added, [create an issue](https://github.com/SylveonDeko/Nekos.Best-API/issues/new/).
 
-### If you find any errors/issues or want any features added, [create an issue](https://github.com/Sylveon76/Nekos.Best-API/issues/new/)
-
-## Getting started
-
-### Installing the package
-
-Add the NuGet package `NekosBestApiNet` to your project:
+## Installation
 
 ```ps
 dotnet add package NekosBestApiNet
 ```
 
-### Simple usage
+## Usage
 
+### Basic usage
+
+The constructor takes a client name string used as the User-Agent header.
 
 ```cs
-using System;
-using System.Threading.Tasks;
 using NekosBestApiNet;
 
-public class ExampleClass
-{
-  private readonly NekosBestApi _nekosBestApi;
+var api = new NekosBestApi("MyAppName");
 
-  public ExampleClass() 
-    => _nekosBestApi = new NekosBestApi();
-
-  public async Task Hug() 
-  {
-    var image = await _nekosBestApi.ActionApi.Hug();
-
-    Console.WriteLine(image.Results.FirstOrDefault().Url);
-  }
-}
+var result = await api.ActionsApi.Hug();
+Console.WriteLine(result.Results[0].Url);
 ```
 
-### Example using custom HttpClient
+### Requesting multiple results
 
-You can provide your own HttpClient instance, but you have to set the BaseAddress manually
+All endpoints accept an optional `amount` parameter (defaults to 1).
 
 ```cs
-using System;
+var results = await api.ActionsApi.Pat(amount: 5);
+foreach (var r in results.Results)
+    Console.WriteLine(r.Url);
+```
+
+### Custom HttpClient
+
+You can provide your own `HttpClient`. You must set `BaseAddress` manually.
+
+```cs
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using NekosBestApiNet;
 
-public ExampleClass() 
+var httpClient = new HttpClient
 {
-  var httpClient = new HttpClient 
-  {
     BaseAddress = new Uri("https://nekos.best/api/v2")
-  };
+};
 
-  _nekosBestApi = new NekosBestApi(httpClient);
-}
+var api = new NekosBestApi(httpClient);
 ```
 
-### Example using dependency injection
-
-Create a ServiceCollection, then add an instance of the NekosBestApi class to it
-
+### Dependency injection
 
 ```cs
-using System;
-using System.Threading.Tasks;
-using NekosBestApi;
+using NekosBestApiNet;
 using Microsoft.Extensions.DependencyInjection;
 
-public class Startup 
-{
-  private NekosBestApi _nekosBestApi;
+var services = new ServiceCollection();
+services.AddSingleton(new NekosBestApi("MyAppName"));
 
-  private IServiceProvider _serviceProvider;
+var provider = services.BuildServiceProvider();
+var api = provider.GetRequiredService<NekosBestApi>();
 
-  public void Init() 
-  {
-    var services = new ServiceCollection();
-
-    _nekosBestApi = new NekosBestApi();
-
-    ConfigureServices(services);
-    _serviceProvider = services.BuildServiceProvider();
-  }
-
-  public async Task RunAsync() 
-  {
-    var exampleClass = _serviceProvider.GetService<ExampleClass>();
-
-    var image = await _nekosBestApi.ActionApi.Hug();
-
-    Console.WriteLine(image.Results.FirstOrDefault().Url);
-  }
-
-  private void ConfigureServices(IServiceCollection services) 
-  {
-    services.AddSingleton(_nekosBestApi);
-    services.AddSingleton<ExampleClass>();
-  }
-}
+var result = await api.ActionsApi.Hug();
+Console.WriteLine(result.Results[0].Url);
 ```
 
-Using this in a class:
+## Available endpoints
 
-```cs
-using System.Threading.Tasks;
-using NekosBestApi;
-using NekosBestApi.Models.Images;
+### ActionsApi
 
-public class ExampleClass 
-{
-  private readonly NekosBestApi _nekosBestApi;
+| Method | Endpoint |
+|---|---|
+| `Angry` | `/angry` |
+| `Baka` | `/baka` |
+| `Bite` | `/bite` |
+| `Bleh` | `/bleh` |
+| `Blowkiss` | `/blowkiss` |
+| `Blush` | `/blush` |
+| `Bonk` | `/bonk` |
+| `Bored` | `/bored` |
+| `Carry` | `/carry` |
+| `Clap` | `/clap` |
+| `Confused` | `/confused` |
+| `Cry` | `/cry` |
+| `Cuddle` | `/cuddle` |
+| `Dance` | `/dance` |
+| `Facepalm` | `/facepalm` |
+| `Feed` | `/feed` |
+| `Happy` | `/happy` |
+| `Handhold` | `/handhold` |
+| `Handshake` | `/handshake` |
+| `Highfive` | `/highfive` |
+| `Hug` | `/hug` |
+| `Kabedon` | `/kabedon` |
+| `Kick` | `/kick` |
+| `Kiss` | `/kiss` |
+| `Laugh` | `/laugh` |
+| `Lappillow` | `/lappillow` |
+| `Lurk` | `/lurk` |
+| `Nod` | `/nod` |
+| `Nom` | `/nom` |
+| `Nope` | `/nope` |
+| `Nya` | `/nya` |
+| `Pat` | `/pat` |
+| `Peck` | `/peck` |
+| `Poke` | `/poke` |
+| `Pout` | `/pout` |
+| `Punch` | `/punch` |
+| `Run` | `/run` |
+| `Salute` | `/salute` |
+| `Shake` | `/shake` |
+| `Shoot` | `/shoot` |
+| `Shocked` | `/shocked` |
+| `Shrug` | `/shrug` |
+| `Sip` | `/sip` |
+| `Slap` | `/slap` |
+| `Sleep` | `/sleep` |
+| `Smile` | `/smile` |
+| `Smug` | `/smug` |
+| `Spin` | `/spin` |
+| `Stare` | `/stare` |
+| `TableFlip` | `/tableflip` |
+| `Teehee` | `/teehee` |
+| `Think` | `/think` |
+| `Thumbsup` | `/thumbsup` |
+| `Tickle` | `/tickle` |
+| `Wag` | `/wag` |
+| `Wave` | `/wave` |
+| `Wink` | `/wink` |
+| `Yawn` | `/yawn` |
+| `Yeet` | `/yeet` |
 
-  public ExampleClass(NekosBestApi nekosBestApi) 
-    => _nekosBestApi = nekosBestApi;
+### CategoryApi
 
-  public async Task<ActionResult> Hug()
-    => await _nekosBestApi.Hug();
-}
-```
+Fetch images by category. See [docs.nekos.best](https://docs.nekos.best/index.html) for the full list of available categories.
 
 [0]: https://img.shields.io/nuget/v/NekosBestApiNet?style=flat-square
 
