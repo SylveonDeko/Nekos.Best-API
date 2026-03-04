@@ -326,4 +326,109 @@ public interface IActionsApi
     /// <returns></returns>
     [Get("/yeet")]
     public Task<ActionResult> Yeet(int amount = 1);
+
+    /// <summary>
+    ///     *bleh* Returns a random bleh image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/bleh")]
+    public Task<ActionResult> Bleh(int amount = 1);
+
+    /// <summary>
+    ///     *blows a kiss* Returns a random blowkiss image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/blowkiss")]
+    public Task<ActionResult> Blowkiss(int amount = 1);
+
+    /// <summary>
+    ///     *picks you up* Returns a random carry image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/carry")]
+    public Task<ActionResult> Carry(int amount = 1);
+
+    /// <summary>
+    ///     *claps* Returns a random clap image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/clap")]
+    public Task<ActionResult> Clap(int amount = 1);
+
+    /// <summary>
+    ///     huh? Returns a random confused image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/confused")]
+    public Task<ActionResult> Confused(int amount = 1);
+
+    /// <summary>
+    ///     *kabedon* Returns a random kabedon image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/kabedon")]
+    public Task<ActionResult> Kabedon(int amount = 1);
+
+    /// <summary>
+    ///     *pats lap* come here. Returns a random lappillow image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/lappillow")]
+    public Task<ActionResult> Lappillow(int amount = 1);
+
+    /// <summary>
+    ///     Nya~ Returns a random nya image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/nya")]
+    public Task<ActionResult> Nya(int amount = 1);
+
+    /// <summary>
+    ///     *salutes* Returns a random salute image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/salute")]
+    public Task<ActionResult> Salute(int amount = 1);
+
+    /// <summary>
+    ///     *shakes* Returns a random shake image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/shake")]
+    public Task<ActionResult> Shake(int amount = 1);
+
+    /// <summary>
+    ///     owo what's this?! Returns a random shocked image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/shocked")]
+    public Task<ActionResult> Shocked(int amount = 1);
+
+    /// <summary>
+    ///     *sips tea* Returns a random sip image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/sip")]
+    public Task<ActionResult> Sip(int amount = 1);
+
+    /// <summary>
+    ///     *spins around* Returns a random spin image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/spin")]
+    public Task<ActionResult> Spin(int amount = 1);
+
+    /// <summary>
+    ///     Teehee~ Returns a random teehee image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/teehee")]
+    public Task<ActionResult> Teehee(int amount = 1);
+
+    /// <summary>
+    ///     *wags tail* Returns a random wag image.
+    ///     <param name="amount">Returns the number of results you want. Defaults to 1.</param>
+    /// </summary>
+    [Get("/wag")]
+    public Task<ActionResult> Wag(int amount = 1);
 }
